@@ -16,7 +16,7 @@ void loadImage3()
         // create file name
         ostringstream imgNumber;                   // #include <sstream>
         imgNumber << setfill('0') << setw(4) << i; // #include <iomanip>
-        string filename = "../images/img" + imgNumber.str() + ".jpg";
+        string filename = "../../images/img" + imgNumber.str() + ".jpg";
 
         // load image and store it into a vector
         cv::Mat img;
