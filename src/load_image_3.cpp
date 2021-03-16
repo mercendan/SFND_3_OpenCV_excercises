@@ -29,12 +29,15 @@ void loadImage3()
     cv::namedWindow(windowName, 1); // create window
     for (auto it = imgList.begin(); it != imgList.end(); ++it)
     {
-
         // STUDENT TASK : Prevent image 7 from being displayed
+        if (it != imgList.begin()+2)
+        { 
+            // display image
+            cv::imshow(windowName, *it);
+            cv::waitKey(500); // wait for 0.5 s
+        }
+        
 
-        // display image
-        cv::imshow(windowName, *it);
-        cv::waitKey(0); // wait for keyboard input before continuing
     }
 }
 
